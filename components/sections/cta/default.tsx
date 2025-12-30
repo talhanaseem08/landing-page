@@ -1,7 +1,6 @@
 import { type VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
 
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 import { Button, buttonVariants } from "../../ui/button";
@@ -17,17 +16,21 @@ interface CTAButtonProps {
 }
 
 interface CTAProps {
-  title?: string;
+  title?: ReactNode;
   buttons?: CTAButtonProps[] | false;
   className?: string;
 }
 
 export default function CTA({
-  title = "Start building",
+  title = (
+    <>
+      Ready to Automate Your <span className="italic font-serif font-normal">Trading?</span>
+    </>
+  ),
   buttons = [
     {
-      href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      href: "/book-call",
+      text: "Book a Call",
       variant: "default",
     },
   ],

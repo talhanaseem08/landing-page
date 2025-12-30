@@ -1,11 +1,18 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { type VariantProps } from "class-variance-authority";
 import { ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
+const Availability = dynamic(() => import("../../ui/framer/availability"), {
+  ssr: false,
+});
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import Github from "../../logos/github";
+
 import { Badge } from "../../ui/badge";
 import { Button, buttonVariants } from "../../ui/button";
 import Glow from "../../ui/glow";
@@ -22,7 +29,7 @@ interface HeroButtonProps {
 }
 
 interface HeroProps {
-  title?: string;
+  title?: ReactNode;
   description?: string;
   mockup?: ReactNode | false;
   badge?: ReactNode | false;
@@ -31,8 +38,12 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = (
+    <>
+      Trade By Intent, <br className="hidden md:block" /> <span className="italic font-serif font-normal">Not By Code</span>
+    </>
+  ),
+  description = "TradePilot lets you deploy Forex and crypto trading bots just by describing your goal. No coding, no strategy building, no technical setup.",
   mockup = (
     <Screenshot
       srcLight="/dashboard-light.png"
@@ -44,14 +55,8 @@ export default function Hero({
     />
   ),
   badge = (
-    <Badge variant="outline" className="animate-appear">
-      <span className="text-muted-foreground">
-        New version of Launch UI is out!
-      </span>
-      <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
-        <ArrowRightIcon className="size-3" />
-      </a>
+    <Badge variant="outline" className="animate-appear [&_p]:font-medium [&_p]:text-sm">
+      <Availability locale="en-US" greenText="Next era of trading" />
     </Badge>
   ),
   buttons = [
@@ -61,10 +66,9 @@ export default function Hero({
       variant: "default",
     },
     {
-      href: siteConfig.links.github,
-      text: "Github",
+      href: "#",
+      text: "Book a Call",
       variant: "glow",
-      icon: <Github className="mr-2 size-4" />,
     },
   ],
   className,
@@ -77,12 +81,12 @@ export default function Hero({
       )}
     >
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
-        <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
+        <div className="flex flex-col items-center gap-6 text-center sm:gap-6">
           {badge !== false && badge}
-          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-heading font-bold tracking-tighter text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-[5rem] md:leading-tight pb-2">
             {title}
           </h1>
-          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
+          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-normal text-balance opacity-0 delay-100 sm:text-xl">
             {description}
           </p>
           {buttons !== false && buttons.length > 0 && (
@@ -92,6 +96,7 @@ export default function Hero({
                   key={index}
                   variant={button.variant || "default"}
                   size="lg"
+                  className="font-semibold text-base"
                   asChild
                 >
                   <a href={button.href}>

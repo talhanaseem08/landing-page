@@ -18,129 +18,56 @@ interface FAQItemProps {
 }
 
 interface FAQProps {
-  title?: string;
+  title?: ReactNode;
   items?: FAQItemProps[] | false;
   className?: string;
 }
 
 export default function FAQ({
-  title = "Questions and Answers",
+  title = (
+    <>
+      Frequently Asked <span className="italic font-serif font-normal">Questions</span>
+    </>
+  ),
   items = [
     {
-      question:
-        "Why building a great landing page is critical for your business?",
-      answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            In today&apos;s AI-driven world, standing out is harder than ever.
-            While anyone can build a product, a professional landing page makes
-            the difference between success and failure.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Launch UI helps you ship faster without compromising on quality.
-          </p>
-        </>
-      ),
-    },
-    {
-      question: "Why use Launch UI instead of a no-code tool?",
-      answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            No-code tools lock you into their ecosystem with recurring fees and
-            limited control. They often come with performance issues and make it
-            difficult to integrate with your product.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            You can&apos;t even change your hosting provider and basic things
-            like web analytics come as extra costs and paid add-ons.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            What might seem like a convenient solution today could paint you
-            into a corner tomorrow, limiting your ability to scale and adapt.
-            Launch UI gives you full control of your code while maintaining
-            professional quality.
-          </p>
-        </>
-      ),
-    },
-    {
-      question:
-        "How Launch UI is different from other components libraries and templates?",
-      answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Launch UI stands out with premium design quality and delightful
-            touches of custom animations and illustrations.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            All components are carefully crafted to help position your product
-            as a professional tool, avoiding the generic template look.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Unlike many libraries that rely on outdated CSS practices and old
-            dependencies, Launch UI is built with modern technologies and best
-            practices in mind.
-          </p>
-        </>
-      ),
-    },
-    {
-      question: 'Why exactly does it mean that "The code is yours"?',
-      answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The basic version of Launch UI is open-source and free forever,
-            under a do-whatever-you-want license.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The pro version that contains more components and options is a
-            one-time purchase that gives you lifetime access to all current and
-            future content. Use it for unlimited personal and commercial
-            projects - no recurring fees or restrictions.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            For complete details about licensing and usage rights, check out{" "}
-            <Link href="/pricing" className="text-foreground underline">
-              the pricing page
-            </Link>
-            .
-          </p>
-        </>
-      ),
-    },
-    {
-      question: "Are Figma files included?",
+      question: "What is TradePilot?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[580px]">
-          Yes! The complete Launch UI template is available for free on the{" "}
-          <Link
-            href="https://www.figma.com/community/file/1420131743903900629/launch-ui-landing-page-components-ui-kit"
-            className="text-foreground underline"
-          >
-            Figma community
-          </Link>
-          .
+          TradePilot is an AI-powered platform that lets you create and deploy trading bots using simple conversational English. No coding or technical setup required.
         </p>
       ),
     },
     {
-      question: "Can I get a discount?",
+      question: "Do I need programming or trading experience?",
       answer: (
-        <>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Actually, yes! I&apos;m always acively looking for beta testers of
-            new features. If you are interested in exchanging feedback for a
-            discount, please contact me via{" "}
-            <a
-              href={siteConfig.links.email}
-              className="underline underline-offset-2"
-            >
-              email
-            </a>
-            .
-          </p>
-        </>
+        <p className="text-muted-foreground mb-4 max-w-[580px]">
+          No. You only describe your trading goal, and TradePilot handles the strategy, testing, and execution automatically.
+        </p>
+      ),
+    },
+    {
+      question: "Which markets are supported?",
+      answer: (
+        <p className="text-muted-foreground mb-4 max-w-[580px]">
+          TradePilot supports Forex and Cryptocurrency markets, including popular pairs like EUR/USD, BTC, ETH, and BNB.
+        </p>
+      ),
+    },
+    {
+      question: "Can I test a bot before using real money?",
+      answer: (
+        <p className="text-muted-foreground mb-4 max-w-[580px]">
+          Yes. You can run a fast backtest on historical data to see how your bot would have performed before going live.
+        </p>
+      ),
+    },
+    {
+      question: "Is my account and data secure?",
+      answer: (
+        <p className="text-muted-foreground mb-4 max-w-[580px]">
+          Yes. All data is encrypted using industry-standard security practices, and your broker API keys are never shared.
+        </p>
       ),
     },
   ],

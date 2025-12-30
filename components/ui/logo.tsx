@@ -21,7 +21,7 @@ export default function Logo({
   version,
   width = 24,
   height = 24,
-  showName = true,
+  showName = false,
   badge,
   ...props
 }: LogoProps) {

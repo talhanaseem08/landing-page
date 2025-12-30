@@ -14,59 +14,65 @@ interface PricingProps {
 }
 
 export default function Pricing({
-  title = "Build your dream landing page, today.",
-  description = "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+  title = "Build Smarter Trading Bots, Today",
+  description = "Create, test, and deploy AI-assisted trading bots with full control and transparency. Simple plans. No hidden rules.",
   plans = [
     {
-      name: "Free",
-      description: "For everyone starting out on a website for their big idea",
+      name: "Starter",
+      description: "Perfect for testing strategies and paper trading.",
       price: 0,
-      priceNote: "Free and open-source forever.",
+      priceNote: "Free forever. No credit card required.",
       cta: {
         variant: "glow",
-        label: "Get started for free",
-        href: "/docs/getting-started/introduction",
+        label: "Start for Free",
+        href: "#",
       },
       features: [
-        "1 website template",
-        "9 blocks and sections",
-        "4 custom animations",
+        "Real-time market data",
+        "Basic backtesting (Last 30 days)",
+        "1 Connected Exchange",
+        "5 Active Paper Bots",
       ],
       variant: "default",
       className: "hidden lg:flex",
     },
     {
-      name: "Pro",
+      name: "Trader",
       icon: <User className="size-4" />,
-      description: "For early-stage founders, solopreneurs and indie devs",
-      price: 149,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description: "For serious traders automating their daily workflow.",
+      price: 49,
+      priceNote: " billed monthly",
       cta: {
         variant: "default",
-        label: "Get all-access",
-        href: siteConfig.pricing.pro,
+        label: "Get Started",
+        href: "#",
       },
       features: [
-        `${siteConfig.stats.templates} templates`,
-        `${siteConfig.stats.sections} blocks and sections`,
-        `${siteConfig.stats.illustrations} illustrations`,
-        `${siteConfig.stats.animations} custom animations`,
+        "All Starter features",
+        "Unlimited Backtesting",
+        "5 Connected Exchanges",
+        "20 Active Live Bots",
+        "AI News sentiment analysis",
       ],
       variant: "glow-brand",
     },
     {
-      name: "Pro Team",
+      name: "Institutional",
       icon: <Users className="size-4" />,
-      description: "For teams and agencies working on cool products together",
-      price: 749,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description: "High-frequency infrastructure for funds and pros.",
+      price: 199,
+      priceNote: " billed monthly",
       cta: {
         variant: "default",
-        label: "Get all-access for your team",
-        href: siteConfig.pricing.team,
+        label: "Contact Sales",
+        href: "#",
       },
       features: [
-        "All the templates, components and sections available for your entire team",
+        "All Trader features",
+        "Sub-millisecond latency",
+        "Dedicated IP & Server",
+        "Priority 24/7 Support",
+        "White-label options",
       ],
       variant: "glow",
     },
@@ -77,14 +83,14 @@ export default function Pricing({
     <Section className={cn(className)}>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-12">
         {(title || description) && (
-          <div className="flex flex-col items-center gap-4 px-4 text-center sm:gap-8">
+          <div className="flex flex-col items-center gap-2 px-4 text-center sm:gap-4">
             {title && (
-              <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
-                {title}
+              <h2 className="from-foreground to-foreground dark:to-muted-foreground bg-linear-to-r bg-clip-text text-3xl leading-tight font-heading font-semibold tracking-tighter text-transparent sm:text-5xl sm:leading-tight pb-2 px-2">
+                Build <span className="italic font-serif font-normal">Smarter</span> Trading Bots, <span className="italic font-serif font-normal">Today</span>
               </h2>
             )}
             {description && (
-              <p className="text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl">
+              <p className="text-base text-muted-foreground max-w-[600px] font-normal">
                 {description}
               </p>
             )}

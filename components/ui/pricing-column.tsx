@@ -27,7 +27,7 @@ const pricingColumnVariants = cva(
 
 export interface PricingColumnProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof pricingColumnVariants> {
+  VariantProps<typeof pricingColumnVariants> {
   name: string;
   icon?: ReactNode;
   description: string;
@@ -111,10 +111,9 @@ export function PricingColumn({
             <div className="flex min-h-[40px] flex-col">
               {price > 0 && (
                 <>
-                  <span className="text-sm">one-time payment</span>
-                  <span className="text-muted-foreground text-sm">
-                    plus local taxes
-                  </span>
+                  <>
+                    <span className="text-muted-foreground text-xl font-medium self-end mb-2">/month</span>
+                  </>
                 </>
               )}
             </div>
