@@ -1370,7 +1370,7 @@ var Component3 = /* @__PURE__ */ React3.forwardRef(function (props, ref) {
 									layoutId={"MuvGlpWhm-container"}
 									nodeId={"MuvGlpWhm"}
 									rendersWithMotion={true}
-									scopeId={"OLoUGThIY"}
+
 									style={{
 										opacity: 1,
 									}}
@@ -1425,7 +1425,7 @@ var Component3 = /* @__PURE__ */ React3.forwardRef(function (props, ref) {
 									layoutId={"SjP6Njt5V-container"}
 									nodeId={"SjP6Njt5V"}
 									rendersWithMotion={true}
-									scopeId={"OLoUGThIY"}
+
 									style={{
 										opacity: 0.5,
 									}}
@@ -1468,7 +1468,7 @@ var Component3 = /* @__PURE__ */ React3.forwardRef(function (props, ref) {
 									layoutId={"S_MzlEvup-container"}
 									nodeId={"S_MzlEvup"}
 									rendersWithMotion={true}
-									scopeId={"OLoUGThIY"}
+
 									style={{
 										opacity: 0.5,
 									}}
@@ -2336,7 +2336,7 @@ var Component4 = /* @__PURE__ */ React4.forwardRef(function (props, ref) {
 								layoutId={"lfdwEZGXx-container"}
 								nodeId={"lfdwEZGXx"}
 								rendersWithMotion={true}
-								scopeId={"m7MVr9wQx"}
+
 								transformTemplate={transformTemplate1}
 							>
 								{_jsx4(stdin_default, {
@@ -2473,7 +2473,7 @@ var Component4 = /* @__PURE__ */ React4.forwardRef(function (props, ref) {
 								layoutId={"VlV2lpRVs-container"}
 								nodeId={"VlV2lpRVs"}
 								rendersWithMotion={true}
-								scopeId={"m7MVr9wQx"}
+
 							>
 								{_jsx4(stdin_default4, {
 									A3R33WBVq: true,

@@ -46,9 +46,8 @@ export default function Hero({
   description = "TradePilot lets you deploy Forex and crypto trading bots just by describing your goal. No coding, no strategy building, no technical setup.",
   mockup = (
     <Screenshot
-      srcLight="/dashboard-light.png"
       srcDark="/dashboard-dark.png"
-      alt="Launch UI app screenshot"
+      alt="TradePilot dashboard screenshot"
       width={1248}
       height={765}
       className="w-full"

@@ -332,10 +332,10 @@ var Component2 = /* @__PURE__ */ React2.forwardRef(function (props, ref) {
 				<Transition value={transition1}>
 					<Link
 						href={ypOX2jdFN}
-						motionChild={true}
+
 						nodeId={"u8HXU5hd9"}
 						openInNewTab={pkd7Pcy3s}
-						scopeId={"vSZ7n3QnF"}
+
 						smoothScroll={true}
 					>
 						<motion2.a

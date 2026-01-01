@@ -2034,7 +2034,7 @@ var Component5 = /* @__PURE__ */ React5.forwardRef(function (props, ref) {
 										layoutId={"ai768V2qI-container"}
 										nodeId={"ai768V2qI"}
 										rendersWithMotion={true}
-										scopeId={"ZjS3Yh4jr"}
+
 									>
 										{_jsx6(stdin_default6, {
 											height: "100%",
@@ -2075,7 +2075,7 @@ var Component5 = /* @__PURE__ */ React5.forwardRef(function (props, ref) {
 										layoutId={"LsIHLVsPm-container"}
 										nodeId={"LsIHLVsPm"}
 										rendersWithMotion={true}
-										scopeId={"ZjS3Yh4jr"}
+
 									>
 										{_jsx6(stdin_default6, {
 											height: "100%",
@@ -2155,7 +2155,7 @@ var Component5 = /* @__PURE__ */ React5.forwardRef(function (props, ref) {
 								layoutId={"qSG63vaLy-container"}
 								nodeId={"qSG63vaLy"}
 								rendersWithMotion={true}
-								scopeId={"ZjS3Yh4jr"}
+
 								style={{
 									mask: "radial-gradient(40% 46% at 50.9% 89.5%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 36.8823902027027%, rgba(0, 0, 0, 0) 100%) add",
 									WebkitMask:

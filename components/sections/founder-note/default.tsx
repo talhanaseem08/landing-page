@@ -5,7 +5,7 @@ export default function FounderNoteSection() {
     return (
         <Section className="py-0">
             <div className="flex justify-center w-full">
-                <FounderNote />
+                <FounderNote locale="" />
             </div>
         </Section>
     );
